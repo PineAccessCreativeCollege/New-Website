@@ -1,0 +1,1 @@
+I'm remaking my website because I have a new, simpler, and prettier idea.
