@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="preloader">
+        <button id="spinDiskButton" onclick="spinDisk()" class="spinDisk"></button>
+    </div>
+
+
+    <script>
+        function spinDisk() {
+            const disk = document.getElementById("spinDiskButton");
+            disk.style.animation = "spin 2s linear infinite ease-in";
+            console.log("ah");
+
+            setTimeout(function () { // asynchronous operation - will be queued in event loop after 5 seconds, but code after seTimeout runs immediately
+                console.log("AHHH");
+                disk.style.animation = "none";
+                document.getElementById("preloader").style.display = "none";
+              }, 2000);
+
+        }
+    </script>
+</body>
+</html>

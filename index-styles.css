@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#preloader{
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(15,21,41,1) 49%, rgba(39,37,82,1) 100%, rgba(0,212,255,1) 100%);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.spinDisk{
+    width: 70vw;
+    height: 70vw;
+    border: none;
+    background-image: url(record.png);
+    background-color: transparent;
+    border-radius: 50%;
+    background-size: 100%;
+}
+
+.spinDisk:hover{
+    cursor: pointer;
+    animation: spin 5s linear infinite;
+}
+
+.spinDisk:click{
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 768px){
+    .spinDisk {
+        width: 60vw;
+        height: 60vw;
+    }
+}
+
+@media (min-width: 992px){
+    .spinDisk {
+        width: 20vw;
+        height: 20vw;
+    }
+}
